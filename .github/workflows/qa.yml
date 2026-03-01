@@ -1,0 +1,19 @@
+name: DataDash Table QA (22f3000722@ds.study.iitm.ac.in)
+
+on: [workflow_dispatch, push]
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - uses: actions/setup-node@v4
+      with: { node-version: 20 }
+      
+    - run: npm install
+      
+    - run: npx playwright install --with-deps
+      
+    - name: Scrape & Sum Tables (22f3000722@ds.study.iitm.ac.in)
+      run: npm run scrape
