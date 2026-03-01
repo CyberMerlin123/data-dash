@@ -1,0 +1,10 @@
+{
+  "name": "table-scraper",
+  "version": "1.0.0",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}
